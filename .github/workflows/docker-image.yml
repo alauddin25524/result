@@ -37,6 +37,6 @@ jobs:
             sudo su -c "
               cd /root/voting-app &&
               sed -i 's/^RESULT_TAG=.*/RESULT_TAG=${{ env.TAG }}/' .env &&
-              docker-compose pull result &&
-              docker-compose up -d result
+              docker compose pull result &&
+              docker compose up -d result
             "
