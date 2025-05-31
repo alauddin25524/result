@@ -24,7 +24,7 @@ jobs:
 
       - name: Build & Push Result Image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/result-app:${{ env.TAG }} -f Dockerfile.result .
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/result-app:${{ env.TAG }} .
           docker push ${{ secrets.DOCKER_USERNAME }}/result-app:${{ env.TAG }}
 
       - name: Deploy Result Service on Server
